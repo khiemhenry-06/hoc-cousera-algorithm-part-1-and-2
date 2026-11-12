@@ -1,0 +1,486 @@
+
+\documentclass[11pt, a4paper]{article}
+\usepackage[a4paper, margin=2cm, headheight=15pt, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{fontspec}
+\usepackage[vietnamese, english, bidi=basic, provide=*]{babel}
+\babelprovide[import, onchar=ids fonts]{vietnamese}
+\babelprovide[import, onchar=ids fonts]{english}
+\babelfont{rm}{Noto Sans}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=--, leftmargin=1.8em, itemsep=2pt, topsep=2pt}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+% Định nghĩa màu sắc trang nhã, chuyên nghiệp
+\definecolor{primary}{RGB}{16, 44, 87}      % Xanh Navy học thuật
+\definecolor{secondary}{RGB}{30, 86, 160}   % Xanh Coursera
+\definecolor{accent}{RGB}{40, 140, 70}      % Xanh lá kết quả
+\definecolor{darkgray}{RGB}{50, 50, 50}
+\definecolor{lightgray}{RGB}{245, 247, 250}
+\definecolor{borderline}{RGB}{210, 215, 225}
+
+% Cấu hình Header & Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{darkgray}\textbf{Báo cáo quá trình học trên Coursera}}
+\fancyhead[R]{\small\color{darkgray}Khóa học: Algorithms (Part I \& II)}
+\fancyfoot[L]{\small\color{darkgray}\textit{Minh chứng hoàn thành MOOC -- Điểm cộng học phần}}
+\fancyfoot[R]{\small\color{darkgray}Trang \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Cấu hình liên kết
+\hypersetup{
+    colorlinks=true,
+    linkcolor=secondary,
+    urlcolor=secondary
+}
+
+\begin{document}
+
+% -------------------------------------------------------------
+% PHẦN ĐẦU TRANG & THÔNG TIN HÀNH CHÍNH
+% -------------------------------------------------------------
+\begin{center}
+    {\color{primary}\rule{\textwidth}{1.6pt}}\\[0.35cm]
+    {\LARGE\bfseries\color{primary} BÁO CÁO QUÁ TRÌNH HỌC TRÊN COURSERA}\\[0.3cm]
+    {\color{primary}\rule{\textwidth}{0.8pt}}
+\end{center}
+
+\vspace{0.2cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} X X @{}}
+    \textbf{Họ và tên:} Lê Phạm Đăng Khiêm & \textbf{MSSV:} 24120341 \\
+    \textbf{Môn học:} Cơ sở trí tuệ nhân tạo & \textbf{Lớp:} CQ2024/23 \\
+\end{tabularx}
+
+\vspace{0.4cm}
+
+% -------------------------------------------------------------
+% MỤC 1: TỔNG QUAN KHÓA HỌC MOOC
+% -------------------------------------------------------------
+\section*{\color{primary}1. Tổng quan các khóa học}
+\vspace{-0.1cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} l X c c @{}}
+    \toprule
+    \textbf{Tên khóa học} & \textbf{Đơn vị đào tạo \& Giảng viên} & \textbf{Ngày bắt đầu} & \textbf{Trạng thái} \\
+    \midrule
+    \textbf{Algorithms, Part I} & Princeton University (R. Sedgewick, K. Wayne) & 19/09 & Hoàn thành 13/13 mô-đun \\
+    \textbf{Algorithms, Part II} & Princeton University (R. Sedgewick, K. Wayne) & 05/10 & Hoàn thành 14/14 mô-đun \\
+    \bottomrule
+\end{tabularx}
+
+\vspace{0.35cm}
+
+\noindent
+\begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{part1.png}\\[0.15cm]
+    {\small\textbf{Minh chứng bắt đầu Part I}\\(Ngày bắt đầu: 19/09)}
+\end{minipage}
+
+\par\vspace{0.4cm}
+\noindent
+\begin{minipage}{\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{part2.png}\\[0.15cm]
+    {\small\textbf{Minh chứng bắt đầu Part II}\\(Ngày bắt đầu: 05/10)}
+\end{minipage}
+
+\vspace{0.3cm}
+\noindent\textbf{Ngôn ngữ được học:} Java
+
+\vspace{0.5cm}
+
+% -------------------------------------------------------------
+% MỤC 2: TIẾN ĐỘ CHI TIẾT - PART I (13 MÔ-ĐUN)
+% -------------------------------------------------------------
+\section*{\color{primary}2. Báo cáo tiến độ chi tiết: Algorithms, Part I (13 Mô-đun)}
+\vspace{-0.2cm}
+Khóa học tập trung vào các cấu trúc dữ liệu nền tảng, thuật toán sắp xếp, cây tìm kiếm và bảng băm. Dưới đây là nhật ký học tập chi tiết của toàn bộ \textbf{13 mô-đun}:
+
+\vspace{0.2cm}
+
+\noindent\textbf{Mô-đun 01: Course introduction (giới thiệu khóa học)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 06/10/2026
+    \item \textbf{Nội dung:} Giới thiệu sẽ được học về các chủ đề (topic): kiểu dữ liệu (data type), sắp xếp (Sorting), tìm kiếm (Searching). Được giới thiệu về lịch sử ra đời của thuật toán và giới thiệu các cuốn sách liên quan đến thuật toán (algorithms).
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} Hoàn thành Video Course introduction \& 100\%: Biết mình sẽ học được những gì trong khóa học algorithms part 1, biết được lịch sử của thuật toán và các giáo trình liên quan.
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 02: Union-Find}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 15/10/2026
+    \item \textbf{Nội dung:} Tìm hiểu bài toán Dynamic Connectivity, học các thuật toán: Quick-Find, Quick-Union, ứng dụng giải bài tập Percolation. 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} Hoàn thành Quiz đạt \&100\%; Hiểu các thuật toán và áp dụng vào giải bài tập Percolation đạt 100/100
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 03: Bài tập Lập trình -- Thấm lọc (Programming Assignment: Percolation)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 12/11/2026 
+    \item \textbf{Nội dung:} phân tích độ phức tạp của thuật toán, kích thước của các kiểu dữ liệu và các phép toán cơ bản tốn bao nhiêu thời gian.
+    \item \textbf{Áp dụng kiến thức:} sử dụng để phân tích các trường hợp với n đầu vào khác nhau để giải các bài toán có giới hạn thời gian trên các nền tảng như: codeforce, VNOI.
+    \item \textbf{Vấn đề gặp phải:} gặp khó khăn khi phân tích các chuỗi, dãy số khi không biết công thức cụ thể.
+    \item \textbf{Kết quả:} Hoàn thành Quiz đạt \& 100\%; hiểu và áp dụng cách phân tích vào các bài toán để tối ưu thời gian chạy.  
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 04: Ngăn xếp và Hàng đợi (Stacks and Queues)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 12/11/2026 
+    \item \textbf{Nội dung:} Học về stack, queue và cách thay đổi kích thước mảng khi cần thêm hoặc bớt phần tử. 
+    \item \textbf{Áp dụng kiến thức:} Dùng stack để lưu các thao tác cần quay lại, dùng queue để xử lý các công việc theo thứ tự đến trước làm trước.
+    \item \textbf{Vấn đề gặp phải:} vẫn còn khó khăn chưa biết cách áp dụng vào bài toán phức tạp.
+    \item \textbf{Kết quả:} Hoàn thành Quiz đạt \& 100\%; vẫn hiểu và áp dụng vào các bài toán đơn giản.
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 05: Các Thuật toán Sắp xếp Cơ bản (Elementary Sorts)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 06: Bài tập Lập trình -- Deques and Randomized Queues}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 07: Sắp xếp Trộn (Mergesort)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 08: Sắp xếp Nhanh (Quicksort)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 09: Bài tập Lập trình -- Điểm Đồng hàng (Collinear Points)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 10: Hàng đợi Ưu tiên \& Cây đống Nhị phân (Priority Queues \& Heaps)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 11: Bảng Ký hiệu Cơ bản (Elementary Symbol Tables)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 12: Bài tập Lập trình -- Trò chơi 8 Ô số (8-Puzzle)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 13: Cây Tìm kiếm Cân bằng, Cây Đỏ Đen \& Bảng Băm (Balanced BSTs \& Hash Tables)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.5cm}
+
+% -------------------------------------------------------------
+% MỤC 3: TIẾN ĐỘ CHI TIẾT - PART II (14 MÔ-ĐUN)
+% -------------------------------------------------------------
+\section*{\color{primary}3. Báo cáo tiến độ chi tiết: Algorithms, Part II (14 Mô-đun)}
+\vspace{-0.2cm}
+Khóa học mở rộng sang các bài toán phức tạp trên đồ thị, thuật toán xử lý chuỗi ký tự, nén dữ liệu và lý thuyết độ phức tạp tính toán. Dưới đây là tiến độ học tập chi tiết của toàn bộ \textbf{14 mô-đun}:
+
+\vspace{0.2cm}
+
+\noindent\textbf{Mô-đun 01: Đồ thị Vô hướng (Undirected Graphs)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 02: Đồ thị Có hướng (Directed Graphs)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 03: Bài tập Lập trình -- Mạng Từ vựng (WordNet)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 04: Cây Khung Nhỏ nhất (Minimum Spanning Trees - MST)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 05: Đường đi Ngắn nhất (Shortest Paths)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 06: Bài tập Lập trình -- Cắt tỉa Nội dung Hình ảnh (Seam Carving)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 07: Luồng Cực đại và Cắt Cực tiểu (Maximum Flow \& Minimum Cut)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 08: Sắp xếp Cơ số (Radix Sorts)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 09: Bài tập Lập trình -- Loại trừ Giải Bóng chày (Baseball Elimination)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 10: Cây Tiền tố (Tries)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 11: Tìm kiếm Chuỗi con (Substring Search)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 12: Bài tập Lập trình -- Trò chơi Tìm từ Boggle (Boggle)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 13: Biểu thức Chính quy \& Nén Dữ liệu (Regular Expressions \& Data Compression)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.15cm}
+
+\noindent\textbf{Mô-đun 14: Thuật toán Khử, Quy hoạch Tuyến tính \& Độ phức tạp Tính toán (Intractability)}
+\begin{itemize}
+    \item \textbf{Thời gian học:} 
+    \item \textbf{Nội dung:} 
+    \item \textbf{Áp dụng kiến thức:} 
+    \item \textbf{Vấn đề gặp phải:} 
+    \item \textbf{Kết quả:} 
+\end{itemize}
+
+\vspace{0.5cm}
+
+% -------------------------------------------------------------
+% MỤC 4: MINH CHỨNG & CHỨNG CHỈ (CERTIFICATES / SCREENSHOTS)
+% -------------------------------------------------------------
+\section*{\color{primary}4. Minh chứng hoàn thành \& Chứng chỉ đính kèm}
+\vspace{-0.2cm}
+Theo yêu cầu bài tập của giảng viên, dưới đây là các minh chứng xác thực từ tài khoản học tập Coursera của sinh viên:
+
+\vspace{0.3cm}
+
+\noindent\textbf{4.1. Liên kết chứng chỉ \& Hồ sơ học tập (Coursera Profile):}
+\begin{itemize}
+    \item \textbf{Coursera Profile URL:} \url{https://www.coursera.org/user/[ma-dinh-danh-cua-ban]}
+    \item \textbf{Chứng chỉ Algorithms, Part I:} \url{https://coursera.org/verify/[ma-chung-chi-part-1]} (Điểm tổng kết: \textbf{100\%})
+    \item \textbf{Chứng chỉ Algorithms, Part II:} \url{https://coursera.org/verify/[ma-chung-chi-part-2]} (Điểm tổng kết: \textbf{100\%})
+\end{itemize}
+
+\vspace{0.3cm}
+
+\noindent\textbf{4.2. Khung ảnh minh chứng tiến độ \& Chứng chỉ xác thực:}
+
+\vspace{0.2cm}
+
+\begin{center}
+    \framebox{\parbox{0.95\textwidth}{
+        \vspace{1.8cm}
+        \centering
+        \textbf{\color{darkgray}[ĐÍNH KÈM ẢNH CHỤP MÀN HÌNH MINH CHỨNG TIẾN ĐỘ TẠI ĐÂY]}\\[0.2cm]
+        {\small\color{darkgray}(Ảnh chụp giao diện Coursera hiển thị: Tên tài khoản, Ngày ghi danh, Thanh tiến độ 100\% và Bảng điểm các bài Programming Assignment)}
+        \vspace{1.8cm}
+    }}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+    \framebox{\parbox{0.95\textwidth}{
+        \vspace{1.8cm}
+        \centering
+        \textbf{\color{darkgray}[ĐÍNH KÈM CHỨNG CHỈ HOÀN THÀNH (CERTIFICATE) NẾU CÓ]}\\[0.2cm]
+        {\small\color{darkgray}(Ảnh scan hoặc bản chụp Certificate cấp bởi Coursera \& Princeton University)}
+        \vspace{1.8cm}
+    }}
+\end{center}
+
+\vspace{0.5cm}
+
+% -------------------------------------------------------------
+% MỤC 5: CAM KẾT LIÊM CHÍNH HỌC THUẬT
+% -------------------------------------------------------------
+\section*{\color{primary}5. Cam kết liêm chính học thuật (Academic Honesty)}
+\vspace{-0.2cm}
+Tôi xin cam đoan:
+\begin{enumerate}[label=\arabic*.]
+    \item Toàn bộ thời gian học tập, xem bài giảng, làm bài tập trắc nghiệm và hiện thực các bài lập trình (Programming Assignments) nêu trên đều do chính bản thân tôi tự giác thực hiện trên nền tảng Coursera.
+    \item Tôi không thực hiện bất kỳ hành vi gian lận mã nguồn, sao chép giải pháp từ bên thứ ba hoặc nhờ người khác học hộ/làm hộ.
+    \item Tôi hiểu rõ quy định của môn học: \textit{"Mọi hành vi gian lận hoặc đạo văn sẽ dẫn đến điểm 0 cho toàn bộ môn học"}. Nếu có bất kỳ sự sai lệch nào so với thực tế, tôi xin chịu hoàn toàn trách nhiệm và mọi hình thức kỷ luật từ Giảng viên và Nhà trường.
+\end{enumerate}
+
+\vspace{0.8cm}
+
+\noindent
+\begin{tabularx}{\textwidth}{@{} X r @{}}
+    & \textbf{Sinh viên báo cáo} \\
+    & \textit{(Ký và ghi rõ họ tên)} \\[1.8cm]
+    & \textbf{Lê Phạm Đăng Khiêm} \\
+\end{tabularx}
+
+\end{document}
